@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(9, 2, 14);
+    font-family: Arial, sans-serif;
+    color: white; /* Make text white to stand out against background */
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.motivation{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100vw;
+}
+
+.box {
+    padding: 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid rgb(204, 0, 255);
+    height: 290px;
+    width: 300px;
+    transition: transform 0.5s; /* Transition effect for transform property */
+}
+
+.box p{
+    margin: 10px 10px 10px;
+}
+
+.box:hover {
+    transform: translateY(-10px); /* Move the box up by 10px */
+}
+.timer {
+    position: fixed;
+    left: 30%;
+    top: 20%;
+    text-align: center;
+}
+.timer h1 {
+    font-size: 48px;
+    margin: 0;
+}

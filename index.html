@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="timer">
+            <h1> <span id="countdown"></span> DAYS OF HARDWORK</h1>
+            <h3>Can make your life 100x better.</h3>
+        </div>
+        <div class="motivation">
+            <div class="box">
+                <h1>Why work hard?</h1>
+                <p>As a middle-class family, we understand the value of hard work and perseverance. We've seen our parents work tirelessly to provide for us, to give us opportunities they might not have had. Education is the key to unlocking a brighter future, a future where our dreams are within reach. By dedicating these <span id="countdown"></span> days to intense preparation and study, we can break barriers and open doors to a world of possibilities.</p>
+            </div>
+            <div class="box">
+
+                <h1>Daily Routine:</h1>
+                <p>
+                    <li>7-8: Wake up.</li>
+                    <li>Up to 12pm: 1 module of English.</li>
+                    <li>Up to 6pm: 1 module of Math.</li>
+                    <li>8-10pm: Revise and do question Bank</li>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function countdown() {
+            const targetDate = new Date('October 5, 2024').getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+            document.getElementById('countdown').innerText = days ;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerText = "Event has passed";
+            }if (distance == 1) {
+                document.getElementById('countdown').innerText = "TODAY IS THE DAY";
+            }
+        }
+
+        countdown();
+        setInterval(countdown, 1000 * 60 * 60 * 24); // Update every 24 hours
+    </script>
+</body>
+</html>
